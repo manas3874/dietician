@@ -1,10 +1,11 @@
 import React from "react";
 import AnalyticsChart from "./AnalyticsChart";
+import userPhoto from "../assets/images/sattva-3.jpg";
 var Analytics = () => {
   return (
     <div className="analytics-section-container">
       <div className="user-image">
-        <p>user image</p>
+        <img src={userPhoto} alt="" />
       </div>
       <div className="analytics-card">
         <p>Lorem ipsum dolor sit.</p>
@@ -12,7 +13,7 @@ var Analytics = () => {
         <p>Lorem ipsum dolor sit.</p>
         <p>Lorem ipsum dolor sit.</p>
         <p>Lorem ipsum dolor sit.</p>
-        <AnalyticsChart />
+        <AnalyticsChart className="analytics-chart" />
       </div>
     </div>
   );
