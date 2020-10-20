@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// ! React library import
 
+import React from "react";
+
+// ! Components import
+
+import NavSlider from "./Components/NavSlider";
+import MidSection from "./Components/MidSection";
+import Analytics from "./Components/Analytics";
+
+// ! Styles import
+import "./Components/styles/app.scss";
+
+// ! App component
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="dashboard-layout">
+        {/* NAV SLIDER */}
+        <NavSlider />
+        {/* Mid section with tasks and interactions */}
+        <MidSection />
+        {/* ANALYTICS */}
+        <Analytics />
+      </div>
     </div>
   );
 }

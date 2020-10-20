@@ -1,0 +1,6 @@
+.mid-section {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 5px;
+  max-height: 100vh;
+}

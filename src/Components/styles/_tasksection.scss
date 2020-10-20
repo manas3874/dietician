@@ -1,0 +1,60 @@
+.task-section-container {
+  background-color: lightgrey;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-items: center;
+  align-items: center;
+
+  > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      color: darkgrey;
+    }
+    .notification {
+      color: grey;
+      h4 {
+        padding: 1rem 0;
+      }
+      span {
+        padding: 0.2rem 1rem;
+        margin-left: 5rem;
+        font-size: 0.8em;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 5rem;
+      }
+    }
+  }
+  .to-do-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid grey;
+    margin: 0.8rem;
+    border-radius: 10px;
+    width: 90%;
+    > div {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      label {
+        margin: 0.3rem 0;
+        input {
+          margin-left: 2rem;
+          outline: none;
+          border: none;
+        }
+      }
+
+      p {
+        margin: 0.4rem 0;
+        color: seashell;
+        background-color: slategray;
+        padding: 0.2rem 1rem;
+        border-radius: 5rem;
+      }
+    }
+  }
+}
