@@ -1,7 +1,7 @@
 import React from "react";
 
-var AnalyticsChart = () => {
-  return <p>Analytics Chart Here</p>;
+var AnalyticsChart = (props) => {
+  return <p className={props.className}>Analytics Chart Here</p>;
 };
 
 export default AnalyticsChart;
