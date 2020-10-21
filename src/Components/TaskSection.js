@@ -1,6 +1,28 @@
 import React from "react";
 
 var TaskSection = () => {
+  var newTask = function (ev) {
+    if (ev.key == "Enter") {
+      console.log("task " + ev.target.value);
+      let task = `<p>${ev.target.value}</p>`;
+      console.log(task);
+      document
+        .getElementById("task-input")
+        .insertAdjacentHTML("afterend", task);
+      ev.target.value = "";
+    }
+  };
+  var newMeal = function (ev) {
+    if (ev.key == "Enter") {
+      console.log("task " + ev.target.value);
+      let task = `<p>${ev.target.value}</p>`;
+      console.log(task);
+      document
+        .getElementById("meal-input")
+        .insertAdjacentHTML("afterend", task);
+      ev.target.value = "";
+    }
+  };
   return (
     <div className="task-section-container">
       <div>
@@ -15,25 +37,25 @@ var TaskSection = () => {
       <div className="to-do-container">
         <div>
           <h3>Today's tasks</h3>
-          <label htmlFor="task-input">
+          <label htmlFor="task-input" id="task-input">
             to do?
-            <input type="text" name="task-input" />
+            <input type="text" name="task-input" onKeyPress={newTask} />
           </label>
 
+          {/* <p>Lorem ipsum dolor sit amet.</p>
           <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p> */}
         </div>
         <div>
           <h3>Today's Meals</h3>
-          <label htmlFor="meal-input">
+          <label htmlFor="meal-input" id="meal-input">
             to eat?
-            <input type="text" name="meal-input" />
+            <input type="text" name="meal-input" onKeyPress={newMeal} />
           </label>
 
+          {/* <p>Lorem ipsum dolor sit amet.</p>
           <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p> */}
         </div>
       </div>
     </div>
