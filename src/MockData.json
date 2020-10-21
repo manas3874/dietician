@@ -1,0 +1,26 @@
+[
+    {
+        "title": "sandwich",
+        "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2019/05/club-sandwich-recipe.jpg",
+        "calories": 225,
+        "recipe": "https://www.greatbritishchefs.com/recipes/mumbai-sandwich-recipe"
+    },
+    {
+        "title": "pizza",
+        "image": "https://www.simplyrecipes.com/wp-content/uploads/2007/01/homemade-pizza-horiz-a-1200-768x512.jpg",
+        "calories": 665,
+        "recipe": "https://www.simplyrecipes.com/recipes/homemade_pizza/"
+    },
+    {
+        "title": "burger",
+        "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hamburger-horizontal-jpg-1523395905.jpg?crop=1.00xw:0.847xh;0,0.135xh&resize=480:*",
+        "calories": 430,
+        "recipe": "https://www.cookwithmanali.com/vegetarian-burger-indian-style/"
+    },
+    {
+        "title": "Milkshake",
+        "image": "https://cdn.tasteatlas.com/images/dishes/5291b5f2fcee42849cd84a03bff55e0a.jpg?w=600&h=450",
+        "calories": 380,
+        "recipe": "https://www.delish.com/cooking/recipe-ideas/a20760804/easy-milkshake-recipe/"
+    }
+]
