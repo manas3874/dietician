@@ -18,10 +18,10 @@ var Interaction = () => {
         </div>
       </div>
       <div className="interaction-grid-bottom">
-        <FoodLink />
-        <FoodLink />
-        <FoodLink />
-        <FoodLink />
+        <FoodLink attr="1" />
+        <FoodLink attr="2" />
+        <FoodLink attr="3" />
+        <FoodLink attr="4" />
       </div>
     </div>
   );

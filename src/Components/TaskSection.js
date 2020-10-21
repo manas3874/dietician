@@ -5,18 +5,21 @@ var TaskSection = () => {
     if (ev.key == "Enter") {
       console.log("task " + ev.target.value);
       let task = `<p>${ev.target.value}</p>`;
-      console.log(task);
+      // console.log(task);
       document
         .getElementById("task-input")
         .insertAdjacentHTML("afterend", task);
       ev.target.value = "";
     }
   };
+  const ingredients = [];
   var newMeal = function (ev) {
     if (ev.key == "Enter") {
       console.log("task " + ev.target.value);
+      ingredients.push(ev.target.value);
+      console.log(ingredients);
       let task = `<p>${ev.target.value}</p>`;
-      console.log(task);
+      // console.log(task);
       document
         .getElementById("meal-input")
         .insertAdjacentHTML("afterend", task);
@@ -49,8 +52,9 @@ var TaskSection = () => {
         <div>
           <h3>Today's Meals</h3>
           <label htmlFor="meal-input" id="meal-input">
-            to eat?
+            build your meal
             <input type="text" name="meal-input" onKeyPress={newMeal} />
+            <button type="submit">create</button>
           </label>
 
           {/* <p>Lorem ipsum dolor sit amet.</p>
