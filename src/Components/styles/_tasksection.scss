@@ -1,8 +1,9 @@
 .task-section-container {
-  background-color: lightgrey;
+  background-color: $base-grey;
+  border-radius: 2rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  justify-items: center;
+
   align-items: center;
 
   > div:first-child {
@@ -15,22 +16,26 @@
     .notification {
       color: grey;
       h4 {
+        margin-left: 2rem;
         padding: 1rem 0;
-      }
-      span {
-        padding: 0.2rem 1rem;
-        margin-left: 5rem;
-        font-size: 0.8em;
-        background-color: black;
-        color: whitesmoke;
-        border-radius: 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        span {
+          padding: 0.2rem 1rem;
+          margin-left: 1.5rem;
+          font-size: 0.8em;
+          background-color: black;
+          color: whitesmoke;
+          border-radius: 5rem;
+        }
       }
     }
   }
   .to-do-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid grey;
+    background-color: $base-green;
+    color: aliceblue;
     margin: 0.8rem;
     border-radius: 10px;
     width: 90%;
@@ -40,11 +45,24 @@
       flex-direction: column;
       align-items: center;
       label {
-        margin: 0.3rem 0;
+        margin: 0.6rem 0;
+        width: 110%;
         input {
           margin-left: 2rem;
           outline: none;
           border: none;
+          display: inline;
+        }
+        .create-meal {
+          display: inline;
+          margin-left: 1rem;
+          a {
+            text-decoration: none;
+            color: $base-blue;
+            border: 2px solid forestgreen;
+            border-radius: 3rem;
+            padding: 0.3rem 1rem 0.5rem 1rem;
+          }
         }
       }
 

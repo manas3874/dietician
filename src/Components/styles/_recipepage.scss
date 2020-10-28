@@ -5,9 +5,11 @@
 }
 
 .recipe-card {
+  background-color: $base-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem 0;
   p {
     text-align: center;
   }
@@ -18,13 +20,46 @@
     align-items: center;
     justify-content: space-evenly;
   }
-  &--img {
+  .flex-column {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &--img {
+    width: 70%;
+    object-fit: cover;
+    // height: 40% !important;
+    // background-position: center;
   }
   &--title {
     font-size: 1.8rem;
+    padding: 2rem 0;
+    color: $base-green;
   }
   &--source {
     font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  &--calories,
+  &--yield {
+    background-color: grey;
+    padding: 0.5rem 2rem;
+    border-radius: 3rem;
+  }
+  &--btn {
+    text-decoration: none;
+    color: $base-green;
+    border: 2px solid forestgreen;
+    border-radius: 3rem;
+    padding: 0.3rem 1rem 0.1rem 1rem;
+    width: 10rem;
+    text-align: center;
+  }
+  &--details-container {
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr 1fr;
+    justify-items: center;
   }
 }

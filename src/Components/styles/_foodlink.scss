@@ -1,5 +1,10 @@
 .food-link {
-  background-color: grey;
+  // background-color: grey;
   padding: 3rem 5rem;
   cursor: pointer;
+
+  &--btn {
+    font-size: 1.8rem;
+    color: $base-blue;
+  }
 }

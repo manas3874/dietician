@@ -35,7 +35,9 @@ var TaskSection = () => {
           <h4>
             Latest <span>6 m</span>
           </h4>
-          <h4>today's target</h4>
+          <h4>
+            today's target <span>12000 steps</span>
+          </h4>
         </div>
       </div>
       <div className="to-do-container">
@@ -53,11 +55,8 @@ var TaskSection = () => {
         <div>
           <h3>Today's Meals</h3>
           <label htmlFor="meal-input" id="meal-input">
-            build your meal
             <input type="text" name="meal-input" onKeyPress={newMeal} />
-            <CreateMeal name="manas" ing={ingredients}>
-              create
-            </CreateMeal>
+            <CreateMeal ing={ingredients} />
           </label>
 
           {/* <p>Lorem ipsum dolor sit amet.</p>
