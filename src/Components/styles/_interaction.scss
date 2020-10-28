@@ -32,10 +32,10 @@
     }
   }
   .interaction-grid-bottom {
-    padding: 1rem;
+    padding: 1rem 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.8rem;
-    max-width: 80%;
+    grid-gap: 1rem;
+    // max-width: 80%;
   }
 }
