@@ -1,29 +1,24 @@
-// ! React library import
+// ! React import
 
 import React from "react";
-
+import { BrowserRouter, Route } from "react-router-dom";
 // ! Components import
 
-import NavSlider from "./Components/NavSlider";
-import MidSection from "./Components/MidSection";
-import Analytics from "./Components/Analytics";
-
+import Dashboard from "./Components/Dashboard";
+import Recipes from "./Components/recipes";
 // ! Styles import
 import "./Components/styles/app.scss";
 
 // ! App component
 function App() {
   return (
-    <div className="App">
-      <div className="dashboard-layout">
-        {/* NAV SLIDER */}
-        <NavSlider />
-        {/* Mid section with tasks and interactions */}
-        <MidSection />
-        {/* ANALYTICS */}
-        <Analytics />
+    <BrowserRouter>
+      {" "}
+      <div className="App">
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/recipes" component={Recipes} />
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

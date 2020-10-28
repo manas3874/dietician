@@ -1,11 +1,11 @@
 import React from "react";
-import GraphChart from "./GraphChart";
+import Chart from "./GraphChart";
 import FoodLink from "./FoodLink";
 var Interaction = () => {
   return (
     <div className="interaction-section-container">
       <div className="interaction-grid-top">
-        <GraphChart />
+        <Chart />
         <div className="user-calorie-status">
           <div>
             <p>Calories taken</p>
@@ -18,10 +18,10 @@ var Interaction = () => {
         </div>
       </div>
       <div className="interaction-grid-bottom">
-        <FoodLink attr="1" />
-        <FoodLink attr="2" />
-        <FoodLink attr="3" />
-        <FoodLink attr="4" />
+        <FoodLink attr="0" name="Sandwich" />
+        <FoodLink attr="1" name="Pizza" />
+        <FoodLink attr="2" name="Burger" />
+        <FoodLink attr="3" name="Milkshake" />
       </div>
     </div>
   );

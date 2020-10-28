@@ -1,5 +1,5 @@
 .interaction-section-container {
-  background-color: cyan;
+  // background-color: cyan;
   display: grid;
   grid-template-rows: 2fr 1fr;
   .interaction-grid-top {
@@ -29,8 +29,9 @@
     }
   }
   .interaction-grid-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.8rem;
   }
 }
