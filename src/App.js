@@ -13,7 +13,6 @@ import "./Components/styles/app.scss";
 function App() {
   return (
     <BrowserRouter>
-      {" "}
       <div className="App">
         <Route exact path="/" component={Dashboard} />
         <Route path="/recipes" component={Recipes} />

@@ -24,7 +24,7 @@ class Chart extends Component {
           {
             label: "Calories Consumed",
             data: [50, 250, 700, 650, 900, 170, 450],
-            backgroundColor: "rgba(238, 146, 128,0.6)",
+            backgroundColor: "#0b5563",
           },
         ],
       },
@@ -33,11 +33,7 @@ class Chart extends Component {
   render() {
     return (
       <div className="graph-chart-container">
-        <Line
-          data={this.state.chartData}
-          
-        
-        />
+        <Line data={this.state.chartData} />
       </div>
     );
   }

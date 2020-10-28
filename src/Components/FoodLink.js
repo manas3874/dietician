@@ -1,63 +1,13 @@
 import React, { Component } from "react";
 import Axios from "axios";
-// import { Component } from "react";
-
-// // ! using a function
-// var FoodLink = (props) => {
-//   const [imglink, setImgLink] = useState([]);
-//   useEffect(() => {
-//     var imglink;
-//     Axios.get(
-//       // `https://api.edamam.com/search?q=${query}&q=tomato&app_id=${appId}&app_key=${appKey}`
-//       `https://5f908bdce0559c0016ad6a41.mockapi.io/dietician/api/Dataset`
-//     ).then((response) => {
-//       imglink = response.data.map((item) => item.image);
-//       // console.log(imglink);
-//       setImgLink(imglink);
-//     });
-//   });
-//   const [foodData, setFoodData] = useState([]);
-//   // foodData = 0;
-//   var fetchData = () => {
-//     // let query = "potato";
-//     // let appId = "a21fa717";
-//     // let appKey = "5ebe583aa60117600d289e1a50a94839";
-//     var foodData1;
-//     Axios.get(
-//       // `https://api.edamam.com/search?q=${query}&q=tomato&app_id=${appId}&app_key=${appKey}`
-//       `https://5f908bdce0559c0016ad6a41.mockapi.io/dietician/api/Dataset`
-//     ).then((response) => {
-//       foodData1 = response.data[props.attr - 1];
-//       setFoodData(foodData1);
-//       console.log(foodData1);
-//     });
-//   };
-//   console.log(foodData);
-//   // setTimeout(() => {
-//   //   console.log(foodData);
-//   // }, 500);
-
-//   return (
-//     <div
-//       className="food-link"
-//       style={{
-//         backgroundImage: `url(${imglink[props.attr]})`,
-//         objectFit: "cover",
-//         backgroundPosition: "center",
-//       }}
-//     >
-//       <p onClick={() => fetchData()}>{props.name}</p>
-//     </div>
-//   );
-// };
-
+import { Link } from "react-router-dom";
 // //! using a class
 
 class FoodLink extends Component {
-  state = { dataset: [], images: [] };
+  state = { dataset: [], images: [], titles: [], recipes: [] };
 
-  componentDidMount() {
-    Axios.get(
+  fetchImages = async () => {
+    await Axios.get(
       // `https://api.edamam.com/search?q=${query}&q=tomato&app_id=${appId}&app_key=${appKey}`
       `https://5f908bdce0559c0016ad6a41.mockapi.io/dietician/api/Dataset`
     ).then((response) => {
@@ -65,11 +15,23 @@ class FoodLink extends Component {
       let images = response.data.map((item) => {
         return item.image;
       });
-
-      this.setState({ dataset: response.data, images: images });
+      let titles = response.data.map((item) => {
+        return item.title;
+      });
+      let recipes = response.data.map((item) => {
+        return item.recipe;
+      });
+      this.setState({
+        dataset: response.data,
+        images: images,
+        titles: titles,
+        recipes: recipes,
+      });
     });
+  };
+  componentDidMount() {
+    this.fetchImages();
   }
-
   render() {
     return (
       <div
@@ -80,9 +42,16 @@ class FoodLink extends Component {
           backgroundPosition: "center",
         }}
       >
-        <p>
-          Button text {this.props.attr} {console.log(this.state.images)}
-        </p>
+        {/* <p>
+          {this.state.titles[this.props.attr]} {console.log(this.state)}
+        </p> */}
+        <Link
+          className="food-link--btn"
+          to={{ pathname: `${this.state.recipes[this.props.attr]}` }}
+          target="_blank"
+        >
+          {this.state.titles[this.props.attr]}
+        </Link>
       </div>
     );
   }

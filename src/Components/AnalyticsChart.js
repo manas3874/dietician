@@ -21,7 +21,7 @@ class AnalyticsChart extends Component {
   render() {
     return (
       <div>
-        <Bar data={this.state.chartData} height="250" />
+        <Bar data={this.state.chartData} height="260" width="200" />
       </div>
     );
   }
