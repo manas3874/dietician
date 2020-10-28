@@ -21,9 +21,11 @@ class Recipes extends Component {
   }
   render() {
     return (
-      <div>
-        <RecipeCard />
-        <h2>{console.log(this.state.recipe)}</h2>
+      <div className="recipe-page">
+        <RecipeCard attr="0" recipes={this.state.recipe} />
+        <RecipeCard attr="0" recipes={this.state.recipe} />
+        <RecipeCard attr="0" recipes={this.state.recipe} />
+        {/* <h2>{console.log(this.state.recipe)}</h2> */}
       </div>
     );
   }
