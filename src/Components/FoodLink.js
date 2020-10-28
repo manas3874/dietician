@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+// import image-0 from "../../public/black-0.png";
+// import image-1 from "../../public/black-1.png";
+// import image-2 from "../../public/black-2.png";
+// import image-3 from "../../public/black-3.png";
 // //! using a class
 
 class FoodLink extends Component {
@@ -32,16 +36,25 @@ class FoodLink extends Component {
   componentDidMount() {
     this.fetchImages();
   }
+  // imageSrc = () => {
+  //   console.log(`image-${this.props.attr}`);
+  //   return `image${this.props.attr}`;
+  // };
   render() {
     return (
       <div
         className="food-link"
-        style={{
-          backgroundImage: `url(${this.state.images[this.props.attr]})`,
-          objectFit: "cover",
-          backgroundPosition: "center",
-        }}
+        // style={{
+        //   backgroundImage: `url(${this.state.images[this.props.attr]})`,
+        //   objectFit: "cover",
+        //   backgroundPosition: "center",
+        // }}
       >
+        <img
+          //! toggle between color/black for various icons
+          src={require(`../../public/color-${this.props.attr}.png`)}
+          alt=""
+        />
         {/* <p>
           {this.state.titles[this.props.attr]} {console.log(this.state)}
         </p> */}
