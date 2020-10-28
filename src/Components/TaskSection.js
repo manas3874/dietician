@@ -1,5 +1,5 @@
 import React from "react";
-
+import CreateMeal from "./CreateMeal";
 var TaskSection = () => {
   var newTask = function (ev) {
     if (ev.key == "Enter") {
@@ -15,9 +15,9 @@ var TaskSection = () => {
   const ingredients = [];
   var newMeal = function (ev) {
     if (ev.key == "Enter") {
-      console.log("task " + ev.target.value);
+      // console.log("task " + ev.target.value);
       ingredients.push(ev.target.value);
-      console.log(ingredients);
+      // console.log(ingredients);
       let task = `<p>${ev.target.value}</p>`;
       // console.log(task);
       document
@@ -26,6 +26,7 @@ var TaskSection = () => {
       ev.target.value = "";
     }
   };
+
   return (
     <div className="task-section-container">
       <div>
@@ -54,7 +55,9 @@ var TaskSection = () => {
           <label htmlFor="meal-input" id="meal-input">
             build your meal
             <input type="text" name="meal-input" onKeyPress={newMeal} />
-            <button type="submit">create</button>
+            <CreateMeal name="manas" ing={ingredients}>
+              create
+            </CreateMeal>
           </label>
 
           {/* <p>Lorem ipsum dolor sit amet.</p>
