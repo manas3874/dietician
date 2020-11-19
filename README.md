@@ -6,15 +6,15 @@ The aim is to develop an open-source project on which developers worldwide can c
 
 >The project is being build on MERN stack.
 
-JavaScript with React.js
+* JavaScript with React.js
 
-[Edamam API](https://developer.edamam.com/edamam-recipe-api) for recipe search
+* [Edamam API](https://developer.edamam.com/edamam-recipe-api) for recipe search
 
-axios
+* axios
 
-react-packages from NPM
+* react-packages from NPM
 
-SCSS
+* SCSS
 
-[mockAPI](https://5f908bdce0559c0016ad6a41.mockapi.io/dietician/api/Dataset)
+* [mockAPI](https://5f908bdce0559c0016ad6a41.mockapi.io/dietician/api/Dataset)
 
