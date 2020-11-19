@@ -4,7 +4,7 @@ The aim is to develop an open-source project on which developers worldwide can c
 
 ## Technical details
 
->The project is being build on MERN stack.
+>The project is complete MERN stack.
 
 * JavaScript with React.js
 
